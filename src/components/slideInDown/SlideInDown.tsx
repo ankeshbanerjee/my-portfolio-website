@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { motion } from "motion/react";
 
-const SlideIn: React.FC<PropsWithChildren> = ({ children }) => {
+const SlideInDown: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <motion.div
       initial={{
@@ -12,10 +12,14 @@ const SlideIn: React.FC<PropsWithChildren> = ({ children }) => {
         y: 0,
         opacity: 1,
       }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
     >
       {children}
     </motion.div>
   );
 };
 
-export default SlideIn;
+export default SlideInDown;

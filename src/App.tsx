@@ -1,11 +1,13 @@
 import React from "react";
 import { Navbar } from "./components/navbar";
+import { Hero } from "./sections/hero";
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full bg-red-500 h-56" />
+      <Hero />
+      <div className="h-10 bg-red-500">Content</div>
     </>
   );
 };

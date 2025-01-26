@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
-import { SlideIn } from "../../slideIn";
+import { SlideInDown } from "../../../slideInDown";
 
 interface NavItemProps {
   text: string;
 }
 const NavItem: React.FC<NavItemProps> = ({ text }) => {
   return (
-    <SlideIn>
+    <SlideInDown>
       <motion.p
         initial={{ rotate: 0, scale: 1, color: "inherit" }}
         whileHover={{
@@ -20,7 +20,7 @@ const NavItem: React.FC<NavItemProps> = ({ text }) => {
       >
         {text}
       </motion.p>
-    </SlideIn>
+    </SlideInDown>
   );
 };
 
