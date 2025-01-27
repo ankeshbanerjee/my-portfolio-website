@@ -1,15 +1,18 @@
+import { MotionProps, motion } from "motion/react";
 import React, { PropsWithChildren } from "react";
-import { motion } from "motion/react";
 
-const SlideInDown: React.FC<PropsWithChildren> = ({ children }) => {
+interface Props extends PropsWithChildren {
+  motionProps?: MotionProps;
+}
+
+const SlideInUp: React.FC<Props> = ({ children, motionProps }) => {
   return (
     <motion.div
       initial={{
-        y: -75,
+        y: 75,
         opacity: 0,
       }}
-      animate={{
-        // here whileInView is not used because it will be used for the navItems, and as initially they aren't in view, so whileInView will not be triggered
+      whileInView={{
         y: 0,
         opacity: 1,
       }}
@@ -20,10 +23,11 @@ const SlideInDown: React.FC<PropsWithChildren> = ({ children }) => {
       viewport={{
         once: true,
       }}
+      {...motionProps}
     >
       {children}
     </motion.div>
   );
 };
 
-export default SlideInDown;
+export default SlideInUp;

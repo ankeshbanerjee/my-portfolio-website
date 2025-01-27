@@ -7,7 +7,7 @@ import { NavItem } from "./components/navItem";
 const Navbar: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className="fixed w-full z-50">
+    <div className="fixed w-full z-50 shadow-2xl shadow-gray-200">
       <div className="w-full relative flex justify-between items-center px-5 py-3 lg:px-10 lg:py-6 bg-white z-40">
         <SlideInDown>
           <h2 className="font-bold lg:text-xl cursor-pointer">ANKESH</h2>

@@ -1,17 +1,19 @@
 import React from "react";
-import heroBackground from "../../assets/hero_bg.svg";
 import { Reveal } from "../../components/reveal";
-import { SideMenu } from "../components/sideMenu";
-import { motion } from "motion/react";
+import { SideMenu } from "./components/sideMenu";
+import { LottieAssets, SvgAssets } from "../../assets";
+import Lottie from "lottie-react";
+import { CustomButton } from "../../components/customButton";
 
 const Hero: React.FC = () => {
   return (
     <div
       className="relative bg-cover bg-center bg-repeat h-[100vh] w-full flex flex-col gap-10 items-center justify-center"
       style={{
-        background: `linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(${heroBackground})`,
+        background: `linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(${SvgAssets.heroBg})`,
       }}
     >
+      <div className="flex-1" />
       <Reveal>
         <h2 className="font-bold text-3xl lg:text-5xl text-center">
           HEY, I'M ANKESH BANERJEE
@@ -27,27 +29,10 @@ const Hero: React.FC = () => {
           </p>
         </Reveal>
       </div>
-      <motion.div
-        initial={{
-          y: 75,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeInOut",
-        }}
-        whileTap={{ scale: 0.8 }}
-        className="px-10 lg:px-16 py-4 rounded-lg bg-purple-600 text-white cursor-pointer mt-6"
-      >
-        <p className="text-white font-semibold text-base lg:text-lg">
-          PROJECTS
-        </p>
-      </motion.div>
+      <CustomButton text="PROJECTS" onClick={() => {}} styles="mt-8" />
       <SideMenu />
+      <div className="flex-1" />
+      <Lottie animationData={LottieAssets.scroll} loop className="mb-6" />
     </div>
   );
 };

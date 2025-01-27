@@ -14,6 +14,9 @@ const Reveal: React.FC<PropsWithChildren> = ({ children }) => {
             opacity: 1,
             y: 0,
           }}
+          viewport={{
+            once: true,
+          }}
         >
           {children}
         </motion.div>
@@ -25,6 +28,9 @@ const Reveal: React.FC<PropsWithChildren> = ({ children }) => {
           whileInView={{
             left: "100%",
             y: 0,
+          }}
+          viewport={{
+            once: true,
           }}
           className="absolute right-0 top-0 bg-black h-full"
         ></motion.div>
