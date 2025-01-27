@@ -21,7 +21,7 @@ import { IoCubeOutline, IoLogoFirebase } from "react-icons/io5";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full py-16 bg-gray-50 flex flex-col items-center justify-center">
+    <div className="w-full py-18 bg-gray-50 flex flex-col items-center justify-center">
       <Reveal>
         <h1 className="font-bold text-2xl lg:text-4xl text-center">ABOUT ME</h1>
       </Reveal>
