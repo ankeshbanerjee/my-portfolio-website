@@ -18,12 +18,12 @@ const CustomButton: React.FC<{
       }}
     >
       <div
-        className={`px-10 lg:px-16 py-3 lg:py-4 rounded-lg bg-purple-600 text-white cursor-pointer shadow-lg ${
+        className={`px-10 lg:px-16 py-3 lg:py-4 rounded-lg bg-purple-600 text-white cursor-pointer drop-shadow-lg ${
           styles ?? ""
         }`}
         onClick={onClick}
       >
-        <p className="text-white font-semibold text-base lg:text-lg">{text}</p>
+        <p className="text-white font-semibold text-sm lg:text-base">{text}</p>
       </div>
     </SlideInUp>
   );

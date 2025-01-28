@@ -4,6 +4,7 @@ import { Hero } from "./sections/hero";
 import { About } from "./sections/about";
 import { Projects } from "./sections/projects";
 import { Contact } from "./sections/contact";
+import { Footer } from "./sections/footer";
 
 const App: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const App: React.FC = () => {
       <About />
       <Projects />
       <Contact />
-      <div className="h-10 bg-red-500">Content</div>
+      <Footer />
     </>
   );
 };

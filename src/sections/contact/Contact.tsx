@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   const [message, setMessage] = useState("");
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat py-32 w-full flex flex-col items-center justify-center"
+      className="relative bg-cover bg-center bg-no-repeat py-18 w-full flex flex-col items-center justify-center"
       style={{
         background: `linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(${SvgAssets.heroBg})`,
       }}
