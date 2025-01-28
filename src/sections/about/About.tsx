@@ -25,7 +25,7 @@ const About: React.FC = () => {
       <Reveal>
         <h1 className="font-bold text-2xl lg:text-4xl text-center">ABOUT ME</h1>
       </Reveal>
-      <div className="mx-auto h-2 w-10 rounded-full bg-purple-600 my-10" />
+      <div className="mx-auto h-2 w-10 rounded-full bg-purple-600 my-6" />
       <div className="px-6 lg:px-80 mb-10 lg:mb-20">
         <Reveal>
           <p className="text-sm lg:text-lg text-center">

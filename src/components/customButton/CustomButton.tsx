@@ -12,6 +12,9 @@ const CustomButton: React.FC<{
         whileTap: {
           scale: 0.8,
         },
+        whileHover: {
+          y: -5,
+        },
       }}
     >
       <div

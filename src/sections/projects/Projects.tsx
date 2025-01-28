@@ -9,7 +9,16 @@ const Projects: React.FC = () => {
       <Reveal>
         <h1 className="font-bold text-2xl lg:text-4xl text-center">PROJECTS</h1>
       </Reveal>
-      <div className="mx-auto h-2 w-10 rounded-full bg-purple-600 mt-10 mb-16" />
+      <div className="mx-auto h-2 w-10 rounded-full bg-purple-600 my-6" />
+      <div className="px-6 lg:px-80 mb-10 lg:mb-20">
+        <Reveal>
+          <p className="text-sm lg:text-lg text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vero
+            provident doloribus velit suscipit numquam amet? Dolorem cumque aut
+            tempore architecto.
+          </p>
+        </Reveal>
+      </div>
       <div className="space-y-28">
         <ProjectItem
           name="BlinkTalk"
