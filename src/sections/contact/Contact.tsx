@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { SvgAssets } from "../../assets";
 import { Reveal } from "../../components/reveal";
 import { CustomTextInput } from "../../components/customTextInput";
@@ -9,9 +9,27 @@ const Contact: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = useCallback(() => {
+    // Basic validation
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    // Create email content
+    const mailtoLink = `mailto:banerjeeankesh@gmail.com?subject=${name} wants to contact&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    window.location.href = mailtoLink;
+
+    // Clear form
+    setName("");
+    setEmail("");
+    setMessage("");
+  }, [name, email, message]);
+
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat py-18 w-full flex flex-col items-center justify-center"
+      className="relative bg-cover bg-center bg-no-repeat py-20 lg:py-32 w-full flex flex-col items-center justify-center"
       style={{
         background: `linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(${SvgAssets.heroBg})`,
       }}
@@ -29,11 +47,14 @@ const Contact: React.FC = () => {
         </Reveal>
       </div>
       <SlideInUp>
-        <div className="p-6 lg:p-10 rounded-lg bg-white shadow-lg w-[90vw] mx-6 lg:w-[60vw] lg:mx-0">
+        <div className="p-6 lg:p-10 rounded-lg bg-white shadow-lg w-[85vw] mx-6 lg:w-[60vw] lg:mx-0">
           <CustomTextInput
             label="Name"
             value={name}
             onChange={setName}
+            validate={(val) =>
+              val.trim().length > 0 ? undefined : "Please enter a valid name"
+            }
             placeholder="Enter Your Name"
             required
           />
@@ -41,6 +62,14 @@ const Contact: React.FC = () => {
             label="Email"
             value={email}
             onChange={setEmail}
+            validate={(email) => {
+              const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (emailRegex.test(email)) {
+                return undefined;
+              } else {
+                return "Please enter a valid email";
+              }
+            }}
             placeholder="Enter Your Email"
             required
           />
@@ -50,10 +79,13 @@ const Contact: React.FC = () => {
             onChange={setMessage}
             placeholder="Enter Your Message"
             rows={6}
+            validate={(val) =>
+              val.trim().length > 0 ? undefined : "Please enter a valid message"
+            }
             required
           />
           <div className="flex justify-center lg:justify-end">
-            <CustomButton onClick={() => {}} text="SUBMIT" styles="" />
+            <CustomButton onClick={handleSubmit} text="SUBMIT" />
           </div>
         </div>
       </SlideInUp>

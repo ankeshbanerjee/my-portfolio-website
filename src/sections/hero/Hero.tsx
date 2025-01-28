@@ -21,15 +21,21 @@ const Hero: React.FC = () => {
       </Reveal>
       <div className="px-6 lg:px-80">
         <Reveal>
-          <p className="text-sm lg:text-lg text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vero
-            provident doloribus velit suscipit numquam amet? Dolorem cumque aut
-            tempore architecto, aliquam provident vero sed commodi deserunt iste
-            sequi, praesentium possimus porro nostrum corrupti magnam.
+          <p className="text-lg lg:text-xl text-center">
+            I am a passionate Mobile App Developer, dedicated to creating
+            intuitive and innovative digital experiences. Skilled in crafting
+            user-friendly interfaces, I thrive on turning ideas into impactful
+            applications.
           </p>
         </Reveal>
       </div>
-      <CustomButton text="PROJECTS" onClick={() => {}} styles="mt-8" />
+      <CustomButton
+        text="PROJECTS"
+        onClick={() => {
+          document.getElementById("projects")?.scrollIntoView();
+        }}
+        styles="mt-8"
+      />
       <SideMenu />
       <div className="flex-1" />
       <Lottie animationData={LottieAssets.scroll} loop className="mb-6" />

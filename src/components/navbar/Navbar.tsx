@@ -7,10 +7,17 @@ import { NavItem } from "./components/navItem";
 const Navbar: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className="fixed w-full z-50 shadow-2xl shadow-gray-200">
+    <div className="fixed w-full z-50 shadow-lg shadow-black/5">
       <div className="w-full relative flex justify-between items-center px-5 py-3 lg:px-10 lg:py-6 bg-white z-40">
         <SlideInDown>
-          <h2 className="font-bold lg:text-xl cursor-pointer">ANKESH</h2>
+          <h2
+            className="font-bold lg:text-xl cursor-pointer"
+            onClick={() => {
+              document.getElementById("home")?.scrollIntoView();
+            }}
+          >
+            ANKESH
+          </h2>
         </SlideInDown>
         <div className="hidden lg:flex gap-14 px-6">
           <NavItem text={"HOME"} />
@@ -32,7 +39,7 @@ const Navbar: React.FC = () => {
                 y: "-100%",
               }}
               animate={{
-                y: 0,
+                y: -1,
               }}
               exit={{
                 y: "-100%",
@@ -42,10 +49,16 @@ const Navbar: React.FC = () => {
               }}
               className="fixed flex flex-col gap-6 justify-center w-full items-center py-6 z-30 bg-white"
             >
-              <NavItem text={"HOME"} />
-              <NavItem text={"ABOUT"} />
-              <NavItem text={"PROJECTS"} />
-              <NavItem text={"CONTACT"} />
+              <NavItem text={"HOME"} closeMenu={() => setIsExpanded(false)} />
+              <NavItem text={"ABOUT"} closeMenu={() => setIsExpanded(false)} />
+              <NavItem
+                text={"PROJECTS"}
+                closeMenu={() => setIsExpanded(false)}
+              />
+              <NavItem
+                text={"CONTACT"}
+                closeMenu={() => setIsExpanded(false)}
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}

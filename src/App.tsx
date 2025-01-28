@@ -10,10 +10,20 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
       <Footer />
     </>
   );

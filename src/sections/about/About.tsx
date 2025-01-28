@@ -21,7 +21,7 @@ import { IoCubeOutline, IoLogoFirebase } from "react-icons/io5";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full py-18 bg-gray-50 flex flex-col items-center justify-center">
+    <div className="w-full py-20 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
       <Reveal>
         <h1 className="font-bold text-2xl lg:text-4xl text-center">ABOUT ME</h1>
       </Reveal>
@@ -29,13 +29,12 @@ const About: React.FC = () => {
       <div className="px-6 lg:px-80 mb-10 lg:mb-20">
         <Reveal>
           <p className="text-sm lg:text-lg text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vero
-            provident doloribus velit suscipit numquam amet? Dolorem cumque aut
-            tempore architecto.
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology
           </p>
         </Reveal>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-14 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 px-6 lg:px-14 items-start">
         <div className="col-span-1 flex flex-col items-start justify-center gap-6">
           <Reveal>
             <h1 className="font-bold text-base lg:text-xl text-start">
@@ -44,23 +43,32 @@ const About: React.FC = () => {
           </Reveal>
           <Reveal>
             <p className="text-xs lg:text-base text-start text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              vero provident doloribus velit suscipit numquam amet? Dolorem
-              cumque aut tempore architecto. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Beatae vero provident doloribus
-              velit suscipit numquam amet? Dolorem cumque aut tempore
-              architecto.
+              I am a Computer Science & Engineering undergraduate from Kalyani
+              Government Engineering College (Batch - 2025) with a passion for
+              Mobile App Development. As a{" "}
+              <strong>Smart India Hackathon'22 Winner</strong> and 1st runner-up
+              in <strong>InCode'23 by InDrive</strong>, I excel in building
+              innovative solutions.
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              vero provident doloribus velit suscipit numquam amet? Dolorem
-              cumque aut tempore architecto. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Beatae vero provident doloribus
-              velit suscipit numquam amet? Dolorem cumque aut tempore
-              architecto.
+              Currently, I am honing my skills as an{" "}
+              <strong>SDE Intern at Mind Webs Ventures</strong>, where I focus
+              on creating impactful mobile applications. My dedication to
+              coding, problem-solving, and delivering exceptional user
+              experiences reflects in my work, making me a driven developer with
+              a keen eye for detail and innovation.
             </p>
           </Reveal>
-          <CustomButton text="MY RESUME" onClick={() => {}} styles="mt-4" />
+          <CustomButton
+            text="MY RESUME"
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/drive/folders/1TQHoxHBjNiuh5ghKdmDtPI3qDBeycDNI?usp=drive_link",
+                "_blank"
+              );
+            }}
+            styles="mt-4"
+          />
         </div>
         <div className="col-span-1 flex flex-col items-start justify-center gap-6">
           <Reveal>
@@ -71,69 +79,102 @@ const About: React.FC = () => {
           <div className="flex flex-wrap gap-3">
             <Reveal>
               <SkillItem
-                icon={<TbBrandReactNative size={24} />}
+                icon={<TbBrandReactNative className="size-5 lg:size-6" />}
                 name="React Native"
               />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiExpo size={24} />} name="Expo" />
-            </Reveal>
-            <Reveal>
-              <SkillItem icon={<SiRedux size={24} />} name="Redux" />
+              <SkillItem
+                icon={<SiExpo className="size-5 lg:size-6" />}
+                name="Expo"
+              />
             </Reveal>
             <Reveal>
               <SkillItem
-                icon={<SiTailwindcss size={24} />}
+                icon={<SiRedux className="size-5 lg:size-6" />}
+                name="Redux"
+              />
+            </Reveal>
+            <Reveal>
+              <SkillItem
+                icon={<SiTailwindcss className="size-5 lg:size-6" />}
                 name="Tailwind CSS"
               />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiTypescript size={24} />} name="Typescript" />
-            </Reveal>
-            <Reveal>
-              <SkillItem icon={<SiJavascript size={24} />} name="Javascript" />
-            </Reveal>
-            <Reveal>
-              <SkillItem icon={<FaFlutter size={24} />} name="Flutter" />
+              <SkillItem
+                icon={<SiTypescript className="size-5 lg:size-6" />}
+                name="Typescript"
+              />
             </Reveal>
             <Reveal>
               <SkillItem
-                icon={<IoCubeOutline size={24} />}
+                icon={<SiJavascript className="size-5 lg:size-6" />}
+                name="Javascript"
+              />
+            </Reveal>
+            <Reveal>
+              <SkillItem
+                icon={<FaFlutter className="size-5 lg:size-6" />}
+                name="Flutter"
+              />
+            </Reveal>
+            <Reveal>
+              <SkillItem
+                icon={<IoCubeOutline className="size-5 lg:size-6" />}
                 name="Flutter BLoC"
               />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiDart size={24} />} name="Dart" />
-            </Reveal>
-            <Reveal>
-              <SkillItem icon={<FaAndroid size={24} />} name="Native Android" />
+              <SkillItem
+                icon={<SiDart className="size-5 lg:size-6" />}
+                name="Dart"
+              />
             </Reveal>
             <Reveal>
               <SkillItem
-                icon={<SiJetpackcompose size={24} />}
+                icon={<FaAndroid className="size-5 lg:size-6" />}
+                name="Native Android"
+              />
+            </Reveal>
+            <Reveal>
+              <SkillItem
+                icon={<SiJetpackcompose className="size-5 lg:size-6" />}
                 name="Jetpack Compose"
               />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiKotlin size={24} />} name="Kotlin" />
+              <SkillItem
+                icon={<SiKotlin className="size-5 lg:size-6" />}
+                name="Kotlin"
+              />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<FaReact size={24} />} name="React.js" />
+              <SkillItem
+                icon={<FaReact className="size-5 lg:size-6" />}
+                name="React.js"
+              />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<FaGitAlt size={24} />} name="Git / Github" />
+              <SkillItem
+                icon={<FaGitAlt className="size-5 lg:size-6" />}
+                name="Git / Github"
+              />
             </Reveal>
             {/* <Reveal>
-              <SkillItem icon={<FaNodeJs size={24} />} name="Node.js" />
+              <SkillItem icon={<FaNodeJs className="size-5 lg:size-6" />} name="Node.js" />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiExpress size={24} />} name="Express.js" />
+              <SkillItem icon={<SiExpress className="size-5 lg:size-6" />} name="Express.js" />
             </Reveal>
             <Reveal>
-              <SkillItem icon={<SiMongodb size={24} />} name="MongoDB" />
+              <SkillItem icon={<SiMongodb className="size-5 lg:size-6" />} name="MongoDB" />
             </Reveal> */}
             <Reveal>
-              <SkillItem icon={<IoLogoFirebase size={24} />} name="Firebase" />
+              <SkillItem
+                icon={<IoLogoFirebase className="size-5 lg:size-6" />}
+                name="Firebase"
+              />
             </Reveal>
           </div>
         </div>

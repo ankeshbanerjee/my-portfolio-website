@@ -5,6 +5,10 @@
   --color-purple-600: oklch(0.558 0.288 302.321);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Source Sans 3", sans-serif;
 }

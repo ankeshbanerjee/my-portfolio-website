@@ -8,6 +8,7 @@ interface Props {
   description: string;
   image: string;
   imageInRight?: boolean;
+  link: string;
 }
 
 const ProjectItem: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const ProjectItem: React.FC<Props> = ({
   description,
   image,
   imageInRight = false,
+  link,
 }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 px-6 lg:px-14 justify-center items-center gap-10">
@@ -41,7 +43,9 @@ const ProjectItem: React.FC<Props> = ({
           </p>
         </Reveal>
         <CustomButton
-          onClick={() => {}}
+          onClick={() => {
+            window.open(link, "_blank");
+          }}
           text="DETAILS"
           styles="w-fit mt-4 lg:mt-10"
         />

@@ -1,12 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-import {
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa6";
 
 const SideMenu: React.FC = () => {
   const sideMenuVariants = {
@@ -45,30 +40,44 @@ const SideMenu: React.FC = () => {
       <motion.div
         variants={sideMenuVariants}
         className="p-3 rounded-lg hover:bg-purple-100 cursor-pointer transition duration-300"
+        onClick={() =>
+          window.open("https://github.com/ankeshbanerjee", "_blank")
+        }
       >
         <FaGithub size={30} />
       </motion.div>
       <motion.div
         variants={sideMenuVariants}
         className="p-3 rounded-lg hover:bg-purple-100 cursor-pointer transition duration-300"
+        onClick={() =>
+          window.open(
+            "https://www.linkedin.com/in/ankesh-banerjee-985911231/",
+            "_blank"
+          )
+        }
       >
         <FaLinkedin size={30} />
       </motion.div>
       <motion.div
         variants={sideMenuVariants}
         className="p-3 rounded-lg hover:bg-purple-100 cursor-pointer transition duration-300"
+        onClick={() => window.open("https://medium.com/@banerjeeankesh")}
       >
-        <FaEnvelope size={30} />
+        <FaMedium size={30} />
       </motion.div>
       <motion.div
         variants={sideMenuVariants}
         className="p-3 rounded-lg hover:bg-purple-100 cursor-pointer transition duration-300"
+        onClick={() =>
+          window.open("https://www.facebook.com/profile.php?id=100073274455002")
+        }
       >
         <FaFacebook size={30} />
       </motion.div>
       <motion.div
         variants={sideMenuVariants}
         className="p-3 rounded-lg hover:bg-purple-100 cursor-pointer transition duration-300"
+        onClick={() => window.open("https://www.instagram.com/being__ankesh/")}
       >
         <FaInstagram size={30} />
       </motion.div>
