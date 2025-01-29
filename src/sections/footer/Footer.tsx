@@ -24,55 +24,42 @@ const Footer: React.FC = () => {
         <div className="space-y-2">
           <h1 className="font-bold text-lg lg:text-xl text-white">SOCIAL</h1>
           <div className="flex flex-wrap justify-start items-center">
-            <div
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
-              onClick={() =>
-                window.open("https://github.com/ankeshbanerjee", "_blank")
-              }
+            <a
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
+              href="https://github.com/ankeshbanerjee"
             >
               <FaGithub className="size-5 lg:size-6" color="white" />
-            </div>
-            <div
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/ankesh-banerjee-985911231/",
-                  "_blank"
-                )
-              }
+            </a>
+            <a
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
+              href="https://www.linkedin.com/in/ankesh-banerjee-985911231/"
             >
               <FaLinkedin className="size-5 lg:size-6" color="white" />
-            </div>
-            <div
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
-              onClick={() => window.open("https://medium.com/@banerjeeankesh")}
+            </a>
+            <a
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
+              href="https://medium.com/@banerjeeankesh"
             >
               <FaMedium className="size-5 lg:size-6" color="white" />
-            </div>
+            </a>
             <a
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
               href="mailto:banerjeeankesh@gmail.com"
             >
               <FaEnvelope className="size-5 lg:size-6" color="white" />
             </a>
-            <div
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
-              onClick={() =>
-                window.open(
-                  "https://www.facebook.com/profile.php?id=100073274455002"
-                )
-              }
+            <a
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
+              href="https://www.facebook.com/profile.php?id=100073274455002"
             >
               <FaFacebook className="size-5 lg:size-6" color="white" />
-            </div>
-            <div
-              className="p-3 rounded-full hover:bg-white/15 transition duration-300 cursor-pointer"
-              onClick={() =>
-                window.open("https://www.instagram.com/being__ankesh/")
-              }
+            </a>
+            <a
+              className="p-3 rounded-full hover:bg-white/15 transition duration-500 cursor-pointer"
+              href="https://www.instagram.com/being__ankesh/"
             >
               <FaInstagram className="size-5 lg:size-6" color="white" />
-            </div>
+            </a>
           </div>
         </div>
       </div>

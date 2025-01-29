@@ -4,16 +4,25 @@ import { Reveal } from "../../components/reveal";
 import { CustomTextInput } from "../../components/customTextInput";
 import { SlideInUp } from "../../components/slideInUp";
 import { CustomButton } from "../../components/customButton";
+import {
+  validateEmail,
+  validateMessage,
+  validateName,
+} from "./utils/validation";
 
 const Contact: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = useCallback(() => {
-    // Basic validation
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      alert("Please fill in all fields");
+  const handleSubmit = function () {
+    // validation
+    if (
+      validateName(name) ||
+      validateEmail(email) ||
+      validateMessage(message)
+    ) {
+      alert("Please fill all the fields correctly");
       return;
     }
 
@@ -25,7 +34,7 @@ const Contact: React.FC = () => {
     setName("");
     setEmail("");
     setMessage("");
-  }, [name, email, message]);
+  };
 
   return (
     <div
@@ -52,9 +61,7 @@ const Contact: React.FC = () => {
             label="Name"
             value={name}
             onChange={setName}
-            validate={(val) =>
-              val.trim().length > 0 ? undefined : "Please enter a valid name"
-            }
+            validate={validateName}
             placeholder="Enter Your Name"
             required
           />
@@ -62,14 +69,7 @@ const Contact: React.FC = () => {
             label="Email"
             value={email}
             onChange={setEmail}
-            validate={(email) => {
-              const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-              if (emailRegex.test(email)) {
-                return undefined;
-              } else {
-                return "Please enter a valid email";
-              }
-            }}
+            validate={validateEmail}
             placeholder="Enter Your Email"
             required
           />
@@ -79,9 +79,7 @@ const Contact: React.FC = () => {
             onChange={setMessage}
             placeholder="Enter Your Message"
             rows={6}
-            validate={(val) =>
-              val.trim().length > 0 ? undefined : "Please enter a valid message"
-            }
+            validate={validateMessage}
             required
           />
           <div className="flex justify-center lg:justify-end">

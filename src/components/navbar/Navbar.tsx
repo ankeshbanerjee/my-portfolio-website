@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Hamburger from "hamburger-react";
 import { SlideInDown } from "../slideInDown";
 import { NavItem } from "./components/navItem";
+import { ImageAssets } from "../../assets";
 
 const Navbar: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,14 +11,14 @@ const Navbar: React.FC = () => {
     <div className="fixed w-full z-50 shadow-lg shadow-black/5">
       <div className="w-full relative flex justify-between items-center px-5 py-3 lg:px-10 lg:py-6 bg-white z-40">
         <SlideInDown>
-          <h2
-            className="font-bold lg:text-xl cursor-pointer"
+          <img
+            src={ImageAssets.logo}
+            alt="logo"
+            className="cursor-pointer h-8"
             onClick={() => {
               document.getElementById("home")?.scrollIntoView();
             }}
-          >
-            ANKESH
-          </h2>
+          />
         </SlideInDown>
         <div className="hidden lg:flex gap-14 px-6">
           <NavItem text={"HOME"} />

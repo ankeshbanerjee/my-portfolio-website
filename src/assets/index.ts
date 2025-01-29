@@ -4,6 +4,7 @@ import BlinkTalkPreview from "./images/blinktalk_preview.png";
 import DailyChroniclesPreview from "./images/daily_chronicles_preview.png";
 import InstagramPreview from "./images/instagram_clone_preview.png";
 import QuickPollPreview from "./images/quickpoll_preview.png";
+import Logo from "./images/ankesh_logo.png";
 
 export const SvgAssets = {
   heroBg: HeroBg,
@@ -18,4 +19,5 @@ export const ImageAssets = {
   dailyChroniclesPreview: DailyChroniclesPreview,
   instagramPreview: InstagramPreview,
   quickPollPreview: QuickPollPreview,
+  logo: Logo,
 };
