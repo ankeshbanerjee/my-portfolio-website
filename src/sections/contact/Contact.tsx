@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = function () {
+  const handleSubmit = useCallback(() => {
     // validation
     if (
       validateName(name) ||
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
     setName("");
     setEmail("");
     setMessage("");
-  };
+  }, [name, email, message]);
 
   return (
     <div
