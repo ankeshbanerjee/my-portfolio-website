@@ -3,16 +3,14 @@ import { Reveal } from "../../components/reveal";
 import { CustomButton } from "../../components/customButton";
 import { SkillItem } from "./components/skillItem";
 import { TbBrandReactNative } from "react-icons/tb";
-import { FaAndroid, FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaAndroid, FaGitAlt, FaReact } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import {
   SiDart,
   SiExpo,
-  SiExpress,
   SiJavascript,
   SiJetpackcompose,
   SiKotlin,
-  SiMongodb,
   SiRedux,
   SiTailwindcss,
   SiTypescript,
